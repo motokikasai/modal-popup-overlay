@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  --primary-color: rgb(30, 5, 251);
 }
 
 html,
@@ -12,13 +13,6 @@ body {
   color: rgba(59, 59, 59, 0.644);
 }
 
-/* main {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-} */
-
 section {
   /* padding: 100px 0; */
 }
@@ -27,11 +21,11 @@ section {
   padding: 120px;
 }
 
-section.sec-over {
+section.sec-overlay {
   position: fixed;
   background: white;
   color: rgb(65, 65, 65);
-  top: 200px;
+  bottom: 300px;
   left: 50%;
   width: 800px;
   /* height: 400px; */
@@ -43,7 +37,7 @@ section.sec-over {
 
 header {
   position: absolute;
-  background: rgb(251, 177, 5);
+  background: var(--primary-color);
   border-radius: 5px 5px 0 0;
   width: 100%;
   color: white;
@@ -52,9 +46,26 @@ header {
 }
 
 .overlay-content {
-  padding: 80px 30px;
+  padding: 80px 30px 150px;
   height: 400px;
   overflow: auto;
+}
+
+.sec-overlay::before,
+.sec-overlay::after {
+  position: absolute;
+  top: -40px;
+  right: 10px;
+  content: "";
+  width: 50px;
+  height: 8px;
+  background: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  border-radius: 6px;
+}
+
+.sec-overlay::after {
+  transform: rotate(135deg);
 }
 
 footer {
@@ -70,4 +81,37 @@ footer {
   box-shadow: 0 -4px 14px -8px rgb(211, 211, 211);
   display: flex;
   justify-content: space-between;
+}
+
+button {
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  /* padding: 10px; */
+}
+
+.left {
+  color: var(--primary-color);
+  background: transparent;
+}
+
+.right {
+  color: white;
+  border: 1px solid rgb(202, 152, 36);
+  background: var(--primary-color);
+}
+
+/* ---------------------------------
+* media query
+* ---------------------------------- */
+
+@media (max-width: 800px) {
+  section.sec-overlay {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .container {
+    padding: 40px;
+  }
 }
