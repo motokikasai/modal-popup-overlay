@@ -2,7 +2,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  --primary-color: rgb(30, 5, 251);
+}
+
+:root {
+  --primary-color: rgb(255, 176, 29);
 }
 
 html,
@@ -13,9 +16,9 @@ body {
   color: rgba(59, 59, 59, 0.644);
 }
 
-section {
-  /* padding: 100px 0; */
-}
+/* :root.checkbox:checked {
+  --primary-color: rgb(29, 191, 255);
+} */
 
 .container {
   padding: 120px;
@@ -27,7 +30,7 @@ section.sec-overlay {
   color: rgb(65, 65, 65);
   bottom: 300px;
   left: 50%;
-  width: 800px;
+  width: 560px;
   /* height: 400px; */
   transform: translate(-50%);
   /* padding: 30px; */
@@ -46,12 +49,71 @@ header {
 }
 
 .overlay-content {
-  padding: 80px 30px 150px;
+  padding: 80px 30px;
   height: 400px;
   overflow: auto;
 }
 
-.sec-overlay::before,
+/* section > .x {
+  transition: 1s;
+} */
+
+/* aside {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+} */
+
+aside {
+  position: absolute;
+  top: -80px;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+  transition: 0.4s;
+}
+
+/* aside:hover {
+  transform: rotate(180deg);
+} */
+
+.checkbox {
+  position: absolute;
+  width: 88%;
+  height: 88%;
+  opacity: 0;
+}
+
+.checkbox:checked {
+  opacity: 1;
+}
+
+/* input label {
+  --primary-color: rgb(29, 172, 255);
+}
+
+input:checked label {
+  --primary-color: rgb(255, 29, 217);
+} */
+
+.x::before,
+.x::after {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  content: "";
+  width: 50px;
+  height: 8px;
+  background: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  border-radius: 6px;
+}
+
+.x::after {
+  transform: rotate(135deg);
+}
+
+/* .sec-overlay::before,
 .sec-overlay::after {
   position: absolute;
   top: -40px;
@@ -62,11 +124,11 @@ header {
   background: rgb(255, 255, 255);
   transform: rotate(45deg);
   border-radius: 6px;
-}
+} */
 
-.sec-overlay::after {
+/* .sec-overlay::after {
   transform: rotate(135deg);
-}
+} */
 
 footer {
   position: absolute;
@@ -104,7 +166,7 @@ button {
 * media query
 * ---------------------------------- */
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   section.sec-overlay {
     width: 100%;
     position: fixed;
