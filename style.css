@@ -16,62 +16,46 @@ body {
   color: rgba(59, 59, 59, 0.644);
 }
 
-/* :root.checkbox:checked {
-  --primary-color: rgb(29, 191, 255);
-} */
-
 .container {
   padding: 120px;
 }
 
-/* main {
-  display: flex;
-
-} */
-
 section.sec-overlay {
   position: fixed;
-  /* bottom: 300px; */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 600px; */
+  top: 0%;
+  left: 0%;
+  /* transform: translate(-50%, 0); */
 
   background: white;
   color: rgb(65, 65, 65);
-
-  /* width: 560px; */
-  /* height: 400px; */
-
-  /* padding: 30px; */
   border-radius: 5px;
   box-shadow: 0 0 40px rgb(27, 27, 27);
 }
 
 header {
-  position: absolute;
+  /* position: absolute; */
   background: var(--primary-color);
   border-radius: 5px 5px 0 0;
   width: 100%;
+  height: 100%;
+  padding: 14px;
   color: white;
-  padding-left: 20px;
   box-shadow: 0 4px 14px -8px rgb(182, 182, 182);
 }
 
-.overlay-content {
-  padding: 80px 30px;
-  height: 400px;
-  overflow: auto;
+h2 {
+  margin: 0;
 }
 
-/* section > .x {
-  transition: 1s;
-} */
-
-/* aside {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-} */
+.overlay-content {
+  padding: 10px 30px;
+  max-height: 200px;
+  overflow: auto;
+}
 
 aside {
   position: absolute;
@@ -82,29 +66,18 @@ aside {
   transition: 0.4s;
 }
 
-/* aside:hover {
-  transform: rotate(180deg);
-} */
-
 .checkbox {
   position: absolute;
   width: 60px;
   height: 60px;
-  top: 
+  /* top: 50%; */
+  left: 68%;
   opacity: 0.6;
 }
 
 .checkbox:checked ~ main {
   --primary-color: rgb(255, 148, 9);
 }
-
-/* input label {
-  --primary-color: rgb(29, 172, 255);
-}
-
-input:checked label {
-  --primary-color: rgb(255, 29, 217);
-} */
 
 .x::before,
 .x::after {
@@ -123,25 +96,8 @@ input:checked label {
   transform: rotate(135deg);
 }
 
-/* .sec-overlay::before,
-.sec-overlay::after {
-  position: absolute;
-  top: -40px;
-  right: 10px;
-  content: "";
-  width: 50px;
-  height: 8px;
-  background: rgb(255, 255, 255);
-  transform: rotate(45deg);
-  border-radius: 6px;
-} */
-
-/* .sec-overlay::after {
-  transform: rotate(135deg);
-} */
-
 footer {
-  position: absolute;
+  /* position: absolute; */
   background: white;
   border-top: 1px solid rgb(216, 216, 216);
   border-radius: 0 0 5px 5px;
@@ -182,9 +138,9 @@ button {
 
 @media (max-width: 600px) {
   section.sec-overlay {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
   }
 
   .container {
