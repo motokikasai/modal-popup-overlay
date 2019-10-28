@@ -57,29 +57,85 @@ h2 {
   overflow: auto;
 }
 
-aside {
-  position: absolute;
-  top: -80px;
-  right: 10px;
-  width: 70px;
-  height: 70px;
-  transition: 0.4s;
+#checkbox {
+  border: 2px solid hotpink;
 }
 
 .checkbox {
   position: fixed;
   width: 60px;
   height: 60px;
-  top: 20%;
-  left: 68%;
-  opacity: 0.6;
+  top: -24%;
+  right: 2%;
+  opacity: 0;
+  z-index: 1;
+  transition: 0.4s;
 }
 
-.checkbox:checked ~ main {
+.checkbox:checked ~ article {
   --primary-color: rgb(255, 148, 9);
 }
 
-.x::before,
+
+.checkbox:hover ~ article > aside {
+  opacity: 0.5;
+}
+
+.switch-button::before,
+.switch-button::after {
+  position: absolute;
+  top: -48px;
+  right: 20px;
+  content: "";
+  width: 50px;
+  height: 8px;
+  background: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  border-radius: 6px;
+}
+
+.switch-button::after {
+  transform: rotate(135deg);
+}
+
+
+
+/* .checkbox::before,
+.checkbox::after {
+  position: absolute;
+  top: 26px;
+  right: 6px;
+  content: "";
+  width: 50px;
+  height: 8px;
+  background: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  border-radius: 6px;
+}
+
+.checkbox::after {
+  transform: rotate(135deg);
+} */
+
+/* .checkbox:hover {
+  transform: rotate(30deg);
+} */
+
+/* aside {
+  position: absolute;
+  top: -80px;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+  transition: 0.9s;
+  transform: rotate(90deg);
+} */
+
+/* aside:hover {
+  transform: rotate(520deg);
+} */
+
+/* .x::before,
 .x::after {
   position: absolute;
   top: 30px;
@@ -94,10 +150,18 @@ aside {
 
 .x::after {
   transform: rotate(135deg);
+} */
+
+
+/* .x::before:hover {
+  transform: rotate(400deg);
 }
 
+.x::after:hover {
+  transform: rotate(200deg);
+} */
+
 footer {
-  /* position: absolute; */
   background: white;
   border-top: 1px solid rgb(216, 216, 216);
   border-radius: 0 0 5px 5px;
@@ -114,7 +178,6 @@ footer {
 button {
   border: 1px solid var(--primary-color);
   border-radius: 4px;
-  /* padding: 10px; */
 }
 
 .left {
