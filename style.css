@@ -5,7 +5,7 @@
 }
 
 :root {
-  --primary-color: rgb(255, 176, 29);
+  --primary-color: rgb(14, 202, 155);
 }
 
 html,
@@ -24,15 +24,24 @@ body {
   padding: 120px;
 }
 
+/* main {
+  display: flex;
+
+} */
+
 section.sec-overlay {
   position: fixed;
+  /* bottom: 300px; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   background: white;
   color: rgb(65, 65, 65);
-  bottom: 300px;
-  left: 50%;
-  width: 560px;
+
+  /* width: 560px; */
   /* height: 400px; */
-  transform: translate(-50%);
+
   /* padding: 30px; */
   border-radius: 5px;
   box-shadow: 0 0 40px rgb(27, 27, 27);
@@ -79,13 +88,14 @@ aside {
 
 .checkbox {
   position: absolute;
-  width: 88%;
-  height: 88%;
-  opacity: 0;
+  width: 60px;
+  height: 60px;
+  top: 
+  opacity: 0.6;
 }
 
-.checkbox:checked {
-  opacity: 1;
+.checkbox:checked ~ main {
+  --primary-color: rgb(255, 148, 9);
 }
 
 /* input label {
@@ -160,6 +170,10 @@ button {
   color: white;
   border: 1px solid rgb(202, 152, 36);
   background: var(--primary-color);
+}
+
+.html-body {
+  --primary-color: rgb(119, 0, 0);
 }
 
 /* ---------------------------------
