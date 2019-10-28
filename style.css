@@ -22,13 +22,13 @@ body {
 
 section.sec-overlay {
   position: fixed;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
-  /* width: 600px; */
-  top: 0%;
-  left: 0%;
-  /* transform: translate(-50%, 0); */
+  align-items: center; */
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   background: white;
   color: rgb(65, 65, 65);
@@ -67,10 +67,10 @@ aside {
 }
 
 .checkbox {
-  position: absolute;
+  position: fixed;
   width: 60px;
   height: 60px;
-  /* top: 50%; */
+  top: 20%;
   left: 68%;
   opacity: 0.6;
 }
