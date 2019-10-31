@@ -13,7 +13,11 @@ body {
   font-family: sans-serif;
   margin: 0;
   background: #777;
-  color: rgba(59, 59, 59, 0.644);
+  /* color: rgba(59, 59, 59, 0.644); */
+}
+
+main {
+  background: rgba(0, 0, 0, 0.445);
 }
 
 .container {
@@ -26,9 +30,9 @@ section.sec-overlay {
   flex-direction: column;
   align-items: center; */
   width: 600px;
-  top: 50%;
+  bottom: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
 
   background: white;
   color: rgb(65, 65, 65);
@@ -71,18 +75,6 @@ h2 {
 .checkbox:checked ~ article {
   --primary-color: rgb(255, 148, 9);
 }
-
-/* .checkbox ~ article > aside {
-  transition: 0.2s;
-} */
-
-/* .checkbox:hover {
-  transform: rotate(58deg);
-} */
-
-/* .checkbox ~ article > aside > .switch-button {
-  transform: rotate(0);
-} */
 
 .checkbox:hover ~ article aside .switch-button {
   transform: rotate(45deg);
@@ -167,10 +159,11 @@ button {
 * media query
 * ---------------------------------- */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   section.sec-overlay {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    bottom: 163px;
     width: 100vw;
   }
 
