@@ -1,6 +1,8 @@
 # Modal window
 
-# Desktop
+![screenshot](/screenshot.png)
+
+## Desktop
 
 - [x] The modal is centered horizontally and vertically
 - [x] There is a darker overlay, so the content below cannot be selected
@@ -9,11 +11,11 @@
 
 - [x] When there is too much content, the content of the modal is scrollable, but the header and footer remain visible.
 
-# Mobile
+## Mobile
 
 - [x] The modal is responsive!
 - [x] It appears at the bottom of the window.
 
-# Theme it
+## Theme it
 
 - [x] How can you easily theme the modal?
